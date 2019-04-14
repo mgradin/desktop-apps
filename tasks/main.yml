@@ -2,5 +2,5 @@
 # tasks file for desktop-apps
 - import_tasks: install.yml
   become: true
-- import_tesks: atom.yml
+- import_tasks: atom.yml
   become: true
