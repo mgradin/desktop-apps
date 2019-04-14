@@ -1,0 +1,12 @@
+---
+- name: Install Desktop apps 
+  dnf:
+    name: [ virt-manager, x2goclient, audacious, remmina, fedora-workstation-repositories, keepass ]
+    state: installed
+
+- name: Install google chrome
+  dnf:
+    enablerepo: google-chrome
+    name: google-chrome-stable
+    state: installed
+

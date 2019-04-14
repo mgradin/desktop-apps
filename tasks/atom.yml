@@ -1,0 +1,7 @@
+#apm install atom-updater-linux
+---
+- name: install the atom rpm from a remote repo
+  dnf:
+    name: 'https://atom.io/download/rpm'
+    state: present
+

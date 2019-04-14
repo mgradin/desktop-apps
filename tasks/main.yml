@@ -1,0 +1,6 @@
+---
+# tasks file for desktop-apps
+- import_tasks: install.yml
+  become: true
+- import_tesks: atom.yml
+  become: true
