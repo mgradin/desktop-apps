@@ -5,3 +5,11 @@
     name: 'https://atom.io/download/rpm'
     state: present
 
+- name: check if atom-updater-linux is installed
+  stat:
+    path: "/home/{{ lookup('env','USER') }}/.atom/packages"
+  register: register_aul
+
+- name: install atom-update-linux if it doesn't exist
+  shell: apm install atom-updater-linux
+  when: register_aul.stat.exists
