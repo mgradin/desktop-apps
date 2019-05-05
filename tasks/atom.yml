@@ -8,11 +8,11 @@
   become: yes
   become_user: "{{ lookup('env','USER') }}"
   stat:
-    path: "/home/{{ lookup('env','USER') }}/.atom/packages"
+    path: "/home/{{ lookup('env','USER') }}/.atom/packages/atom-updater-linux"
   register: register_aul
 
 - name: install atom-update-linux if it doesn't exist
   become: yes
   become_user: "{{ lookup('env','USER') }}"
   shell: apm install atom-updater-linux
-  when: register_aul.stat.exists
+  when: register_aul.stat.exists = False
