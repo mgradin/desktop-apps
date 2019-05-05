@@ -15,4 +15,4 @@
   become: yes
   become_user: "{{ lookup('env','USER') }}"
   shell: apm install atom-updater-linux
-  when: register_aul.stat.exists = False
+  when: register_aul.stat.exists == False
