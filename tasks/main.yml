@@ -4,3 +4,5 @@
   become: true
 - import_tasks: atom.yml
   become: true
+- import_tasks: flatpak.yml
+  become: true
